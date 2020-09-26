@@ -79,7 +79,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: ""
+      display: "Dururum durum"
     }
     //this.handleDisplay = this.handleDisplay.bind(this)
   }
@@ -88,11 +88,11 @@ class App extends React.Component {
   handleDisplay = (display) => this.setState({display})
   //use function declaration syntax need binding  
   //handleDisplay(display){this.setState({display})}
-  
+
   render() {
   return (
     <div className="App" id="drum-machine">
-      <div id="display">{!this.state.display?"Dururum durm":this.state.display}</div>
+      <div id="display">{this.state.display}</div>
       <div id="drum-pads">{data.map(d=>{
         return <DrumPad 
         key={d.id}
